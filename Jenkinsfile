@@ -8,6 +8,7 @@ timestamps {
            // def mvnHome = tool name: 'maven-3', type: 'maven'
            // sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
            sh 'mvn test'
+           sh 'mvn -B -DskipTests clean package'
           }
 
         stage('Checkout'){
