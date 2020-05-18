@@ -8,6 +8,9 @@ timestamps {
             checkout scm
         }
         stage('Build'){
+            steps {
+               sh 'mvn -B -DskipTests clean package'
+            }
             sh '''
             BRANCH_CLEAN=$(echo $BRANCH_NAME | sed \'s#feature/##g\' | perl -pe \'s/[^\\w]+//g\' | perl -pe \'s/$//g\')
             VERSION=$(date +%Y.%m.%d)
@@ -18,6 +21,10 @@ timestamps {
 
         }
         stage('Test'){
+            steps{
+                sh 'mvn test'
+            }
+
         sh '''
         cat pom.xml
         '''
