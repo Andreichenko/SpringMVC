@@ -20,7 +20,7 @@ timestamps {
         }
         stage('Test'){
 
-            sh 'mvn -B -DskipTests clean package'
+            sh 'mvn test'
         //sh '''
         //cat pom.xml
         //'''
