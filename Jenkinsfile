@@ -1,6 +1,9 @@
 properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '10', artifactNumToKeepStr: '30', daysToKeepStr: '365', numToKeepStr: '']]]);
 timestamps {
     node('master'){
+    tools {
+        maven 'M3'
+      }
         workspace = pwd()
         // Mark the code checkout 'stage'....
         stage('Checkout'){
