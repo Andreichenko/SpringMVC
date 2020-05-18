@@ -1,11 +1,14 @@
 properties([[$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator', artifactDaysToKeepStr: '10', artifactNumToKeepStr: '30', daysToKeepStr: '365', numToKeepStr: '']]]);
 timestamps {
     node('master'){
-    tools {
-        maven 'M3'
-      }
         workspace = pwd()
         // Mark the code checkout 'stage'....
+
+        stage('com'){
+            def mvnHome = tool name: 'Apache Maven 3.6.0', type: 'maven'
+            sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
+          }
+
         stage('Checkout'){
             // Get some code from a GitHub repository
             checkout scm
