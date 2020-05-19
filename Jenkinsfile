@@ -37,6 +37,10 @@ timestamps {
         sh '''
         cat pom.xml
         cat webapp/index.jsp
+        cat webapp/WEB-INF/web.xml
+        cat webapp/WEB-INF/config/application-context.xml
+        cat webapp/WEB-INF/config/mvc-config.xml
+        ls -la  webapp/WEB-INF/view/error/
         '''
         }
 
