@@ -41,6 +41,7 @@ timestamps {
         cat webapp/WEB-INF/config/application-context.xml
         cat webapp/WEB-INF/config/mvc-config.xml
         ls -la  webapp/WEB-INF/view/error/
+        ls -la  webapp/resources
         '''
         }
 
