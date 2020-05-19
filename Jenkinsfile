@@ -34,9 +34,10 @@ timestamps {
         stage('Test'){
 
             sh 'mvn test'
-        //sh '''
-        //cat pom.xml
-        //'''
+        sh '''
+        cat pom.xml
+        cat webapp/index.jsp
+        '''
         }
 
 
