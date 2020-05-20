@@ -6,6 +6,10 @@ package de.frei.springMvc.mvc.excelpdf;
 
 public class Cat {
 
+    /**
+     * MOCK-class
+     */
+
     private String name;
     private String color;
     private int weight;
