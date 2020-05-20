@@ -16,6 +16,11 @@ import java.util.List;
 @Controller
 public class ExcelPDFController {
 
+    /**
+     *
+     * @return cats from two GET requests as pdf and excel
+     */
+
     @RequestMapping(value = "/excel", method= RequestMethod.GET)
     public ModelAndView excel() {
         System.out.println("ExcelPDFController excel is called");
@@ -25,6 +30,17 @@ public class ExcelPDFController {
         //excelDocument - look excel-pdf-config.xml
         //excelDocument as view
         return new ModelAndView("excelDocument", "modelObject", cats);
+    }
+
+    @RequestMapping(value = "/pdf", method= RequestMethod.GET)
+    public ModelAndView pdf() {
+
+        System.out.println("ExcelPDFController pdf is called");
+
+        List<Cat> cats = createCats();
+        //pdfDocument - look excel-pdf-config.xml
+        return new ModelAndView("pdfDocument", "modelObject", cats);
+
     }
 
     private List<Cat> createCats() {
