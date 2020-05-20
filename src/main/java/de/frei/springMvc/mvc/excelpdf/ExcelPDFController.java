@@ -23,6 +23,7 @@ public class ExcelPDFController {
         List<Cat> cats = createCats();
 
         //excelDocument - look excel-pdf-config.xml
+        //excelDocument as view
         return new ModelAndView("excelDocument", "modelObject", cats);
     }
 
