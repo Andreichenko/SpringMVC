@@ -44,6 +44,7 @@ timestamps {
         ls -la  webapp/resources
         ls -la  webapp/WEB-INF/view/about
         cat webapp/WEB-INF/view/about/about.jsp
+        cat Dockerfile
         '''
         }
 
