@@ -15,5 +15,11 @@ public class JUnit5Test {
         justAnTest();
         System.out.print("the all tests was loaded");
     }
+    @Test
+    public void nextTest(){
+        justAnTest();
+        secondTest();
+        System.out.print("TEST 3 is DONE");
+    }
 
 }
