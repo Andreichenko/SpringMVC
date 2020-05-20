@@ -9,6 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ExcelPdfController - the main controller for coloboration between model and view
+ */
+
 @Controller
 public class ExcelPDFController {
 
