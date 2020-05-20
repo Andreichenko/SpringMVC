@@ -14,7 +14,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * created by Sascha Frei
+ */
+
 public class PDFDocument extends AbstractPdfView{
+
+    /**
+     *
+     * @param model this is the parameter of our model for mapping
+     * @param document documents' parameter itself
+     * @param writer writer to the file
+     * @param request request to api
+     * @param response response from api
+     * @throws Exception the common exception
+     */
 
     @Override
     protected void buildPdfDocument(
