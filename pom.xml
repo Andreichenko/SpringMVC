@@ -129,6 +129,12 @@
         <version>5.4.2</version>
         <scope>test</scope>
     </dependency>
+        <!-- JAXB XML Binding (@XmlElement, @XMLRoot)-->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.10</version>
+        </dependency>
 
     </dependencies>
     <!--http://startbootstrap.com/template-overviews/modern-business/  this is theme-->
