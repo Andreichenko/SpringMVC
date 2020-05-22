@@ -1,17 +1,18 @@
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 public class JUnit5Test {
 
     /**
      *
-     *Simple test for application
+     *Simple test for application Junit
      */
     @Test
-    void justAnTest(){
+    public void justAnTest(){
        System.out.print("Test has been finished");
     }
 
     @Test
-    void secondTest(){
+    public void secondTest(){
         justAnTest();
         System.out.print("the all tests was loaded");
     }
