@@ -4,7 +4,7 @@ public class JUnit5Test {
 
     /**
      *
-     *Simple test for application
+     *Simple test for application Junit
      */
     @Test
     void justAnTest(){
