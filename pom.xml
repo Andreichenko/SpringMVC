@@ -35,6 +35,15 @@
         <hibernate.version>5.0.1.Final</hibernate.version>
         <!-- I don't know why, but with 5.0.5 final app not working! -->
 
+        <!-- Spring Data -->
+        <spring-framework.data.version>1.9.1.RELEASE</spring-framework.data.version>
+
+        <!-- Quartz scheduling framework -->
+        <quartz.scheduling.version>2.2.1</quartz.scheduling.version>
+
+        <!-- Spring Security -->
+        <spring-security.version>4.0.4.RELEASE</spring-security.version>
+
     </properties>
 
     <dependencyManagement>
