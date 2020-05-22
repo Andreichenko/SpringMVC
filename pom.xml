@@ -86,11 +86,6 @@
     </dependency>
 
 
-    <dependency>
-        <groupId>com.fasterxml.jackson.dataformat</groupId>
-        <artifactId>jackson-dataformat-xml</artifactId>
-    </dependency>
-
     <!-- PDF view -->
     <dependency>
         <groupId>com.lowagie</groupId>
@@ -115,6 +110,15 @@
     <!--http://startbootstrap.com/template-overviews/modern-business/  this is theme-->
 
     <build>
+
+
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+
 
         <plugins>
             <plugin>
