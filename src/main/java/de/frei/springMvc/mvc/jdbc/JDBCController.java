@@ -41,6 +41,15 @@ public class JDBCController {
 
     }
 
+    @RequestMapping(value = "/jdbcDelete/user/{iduser}", method=RequestMethod.GET)
+    public ModelAndView jdbcDelete( @PathVariable(value="iduser") int iduser) {
+        System.out.println("JDBCController jdbcDelete is called");
+        boolean result = jdbcExample.deleteUSER(iduser);
+        return new ModelAndView("/jdbc/jdbc", "resultObject", result);
+
+    }
+
+
 
 
 
