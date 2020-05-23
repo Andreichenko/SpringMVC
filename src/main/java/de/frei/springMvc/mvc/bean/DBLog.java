@@ -2,16 +2,16 @@ package de.frei.springMvc.mvc.bean;
 
 import java.io.Serializable;
 
-public class BLog implements Serializable {
+public class DBLog implements Serializable {
 
     private static final long serialVersionUID = 1L;
     private int IDLOG;
     private String LOGSTRING;
 
-    public BLog() {
+    public DBLog() {
     }
 
-    public BLog(int IDLOG, String LOGSTRING) {
+    public DBLog(int IDLOG, String LOGSTRING) {
         this.IDLOG = IDLOG;
         this.LOGSTRING = LOGSTRING;
     }
