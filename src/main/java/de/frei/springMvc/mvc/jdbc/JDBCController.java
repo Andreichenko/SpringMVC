@@ -49,6 +49,15 @@ public class JDBCController {
 
     }
 
+    @RequestMapping(value = "/jdbcUpdate/user/username/{username}/enabled/{enabled}", method=RequestMethod.GET)
+    public ModelAndView jdbcUpdate(@PathVariable(value="username") String username, @PathVariable(value="enabled") boolean enabled) {
+        System.out.println("JDBCController jdbcUpdate is called");
+        User user = new User();
+        user.setUsername(username);
+        boolean result = jdbcExample.updateUserEnable(user, enabled);
+        return new ModelAndView("/jdbc/jdbc", "resultObject", result);
+    }
+
 
 
 
