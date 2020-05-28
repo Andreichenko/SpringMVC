@@ -18,4 +18,11 @@ public class ScopeController {
         return new ModelAndView("/scope/scope");
     }
 
+    @RequestMapping(value = "/invalidateSession", method=RequestMethod.GET)
+    public ModelAndView invalidateSession(HttpSession session) {
+        System.out.println("ScopeController invalidate is called");
+        session.invalidate();
+        return new ModelAndView("/scope/scope");
+    }
+
 }
