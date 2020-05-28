@@ -64,5 +64,16 @@ public class RestUserModel {
 
     public class Address{
 
+        private String street;
+        private String suite;
+        private String zipcode;
+        private Geo geo;
+
+
+
+        public class Geo {
+
+        }
+
     }
 }
