@@ -10,5 +10,7 @@ public class RestUserModel {
     private String email;
     private Address address;
 
+    public class Address{
 
+    }
 }
