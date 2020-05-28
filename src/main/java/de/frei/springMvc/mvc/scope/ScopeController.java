@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -22,6 +23,13 @@ public class ScopeController {
     public ModelAndView invalidateSession(HttpSession session) {
         System.out.println("ScopeController invalidate is called");
         session.invalidate();
+        return new ModelAndView("/scope/scope");
+    }
+
+    @RequestMapping(value = "/scopeRequest", method=RequestMethod.GET)
+    public ModelAndView requestScopeExample(HttpServletRequest request) {
+        System.out.println("ScopeController requestScopeExample is called");
+        request.setAttribute("requestObject", "This is request object");
         return new ModelAndView("/scope/scope");
     }
 
