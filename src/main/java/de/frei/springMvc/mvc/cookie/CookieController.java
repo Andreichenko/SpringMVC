@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class CookieController {
@@ -22,5 +23,16 @@ public class CookieController {
             cookieValue  = "Object: " + cookieName + ";<br/> Name: " + cookieName.getName() + ";<br/> Value: " + cookieName.getValue();
         }
         return new ModelAndView("/cookie/cookieView", "cookieValueObj", cookieValue);
+    }
+
+    @RequestMapping(value = "/writeCookie", method=RequestMethod.GET)
+    public String writeCookieExample (HttpServletRequest request, HttpServletResponse response) {
+        System.out.println("CookieControllerExample writeCookieExample() is called");
+        Cookie cookie = new Cookie("cookieName", request.getRequestURL().toString());
+        cookie.setMaxAge(3600);
+        response.addCookie(cookie);
+        System.out.println("Object: " + cookie + "; Name: " + cookie.getName() + "; Value: " + cookie.getValue());
+        return "/cookie/cookieView";
+
     }
 }
