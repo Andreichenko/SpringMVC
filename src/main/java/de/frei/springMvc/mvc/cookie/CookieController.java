@@ -35,4 +35,20 @@ public class CookieController {
         return "/cookie/cookieView";
 
     }
+
+    @RequestMapping(value = "/readAllCookies", method=RequestMethod.GET)
+    public ModelAndView readAllCookiesExample(HttpServletRequest request) {
+        System.out.println("CookieControllerExample readAllCookiesExample() is called");
+
+        Cookie[] cookies = request.getCookies();
+        System.out.println("All Cookies in your browsers");
+        String cookiesStr = "";
+        for(Cookie cookie : cookies){
+            System.out.println(cookie.getName() + " : " + cookie.getValue());
+            cookiesStr += cookie.getName() + " : " + cookie.getValue() + " : " + cookie + "<br/>";
+        }
+
+        return new ModelAndView("/cookie/cookieView", "cookieValueObj", cookiesStr);
+
+    }
 }
