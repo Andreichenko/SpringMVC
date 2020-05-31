@@ -1,6 +1,7 @@
 package de.frei.springMvc.mvc.security;
 
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +28,14 @@ public class SecurityController {
     public ModelAndView userOrAdminCanCall() {
         System.out.println("SecurityController userOrAdminCanCall() is called with ROLE_ADMIN or ROLE_USER");
         return new ModelAndView("/security/profile");
+    }
+
+    //Spring Security
+    @Secured(value={"ROLE_ADMIN"})
+    @RequestMapping(value="/adminMethodSecured", method=RequestMethod.GET)
+    public ModelAndView adminMethodSecured() {
+        System.out.println("SecurityController adminMethodSecured() is called with ADMIN ROLE");
+        return new ModelAndView("/security/admin");
+
     }
 }
