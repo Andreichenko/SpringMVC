@@ -23,4 +23,9 @@ public class ORMService {
         TypedQuery<User> typedQuery = entityManager.createQuery(query, User.class);
         return typedQuery.getResultList();
     }
+
+    public User queryFindUserById (int id) {
+        System.out.println("ORMService queryFindUserById is called");
+        return entityManager.find(User.class, id);
+    }
 }
