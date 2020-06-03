@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -27,5 +28,16 @@ public class ORMService {
     public User queryFindUserById (int id) {
         System.out.println("ORMService queryFindUserById is called");
         return entityManager.find(User.class, id);
+    }
+
+    public boolean updateUser(int id, boolean enabled) {
+        System.out.println("ORMService updateUser is called");
+
+        String query= "update user set enabled = ? where iduser = ?";
+        Query nativeQuery = entityManager.createNativeQuery(query);
+        nativeQuery.setParameter(1, enabled);
+        nativeQuery.setParameter(2, id);
+        int result = nativeQuery.executeUpdate();
+        return result > 0; // result show how many rows was updated.
     }
 }
