@@ -46,4 +46,17 @@ public class ORMController {
         boolean result = ormService.deleteUser(iduser);
         return new ModelAndView("/orm/orm", "resultObject", result);
     }
+
+
+    @RequestMapping(value = "/ormInsertUser/username/{username}/password/{password}/enabled/{enabled}"
+            , method=RequestMethod.GET)
+    public ModelAndView ormInsertUser(
+            @PathVariable(value="username") String username,
+            @PathVariable(value="password") String password,
+            @PathVariable(value="enabled") boolean enabled) {
+        System.out.println("ORMController ormInsertUser is called");
+        boolean result = ormService.insertUser(username, password, enabled);
+        return new ModelAndView("/orm/orm", "resultObject", result);
+
+    }
 }
