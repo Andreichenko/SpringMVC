@@ -39,4 +39,11 @@ public class ORMController {
         boolean result = ormService.updateUser(iduser, enabled);
         return new ModelAndView("/orm/orm", "resultObject", result);
     }
+
+    @RequestMapping(value = "/ormDeleteUser/iduser/{iduser}", method=RequestMethod.GET)
+    public ModelAndView ormDeleteUser(@PathVariable(value="iduser") int iduser) {
+        System.out.println("ORMController jdbcDelete is called");
+        boolean result = ormService.deleteUser(iduser);
+        return new ModelAndView("/orm/orm", "resultObject", result);
+    }
 }
