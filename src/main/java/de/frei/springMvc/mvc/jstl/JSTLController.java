@@ -17,4 +17,9 @@ public class JSTLController {
     public ModelAndView listUsers() {
         return new ModelAndView("jstl/jstl", "resultObjectList", ormService.queryFindAllUsersJPA());
     }
+
+    @RequestMapping(value="/jstlUser", method=RequestMethod.GET)
+    public ModelAndView getUser() {;
+        return new ModelAndView("jstl/jstl", "resultObject", ormService.queryFindUserById(1));
+    }
 }
