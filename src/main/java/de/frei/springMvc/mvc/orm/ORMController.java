@@ -30,4 +30,13 @@ public class ORMController {
         User user = ormService.queryFindUserById(userid);
         return new ModelAndView("/orm/orm", "resultObject", user);
     }
+
+    @RequestMapping(value = "/ormUpdateUser/iduser/{iduser}/enabled/{enabled}", method=RequestMethod.GET)
+    public ModelAndView ormUpdateUser(
+            @PathVariable(value="iduser") int iduser,
+            @PathVariable(value="enabled") boolean enabled) {
+        System.out.println("ORMController ormUpdateUser is called");
+        boolean result = ormService.updateUser(iduser, enabled);
+        return new ModelAndView("/orm/orm", "resultObject", result);
+    }
 }
