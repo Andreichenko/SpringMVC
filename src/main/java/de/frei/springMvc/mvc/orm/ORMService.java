@@ -54,4 +54,15 @@ public class ORMService {
         return result > 0;
     }
 
+    public boolean deleteUser(int idUser) {
+        System.out.println("ORMExample deleteUser is called");
+
+        String qlString = "delete from user where iduser=?";
+        Query query = entityManager.createNativeQuery(qlString);
+        query.setParameter(1, idUser);
+        int result = query.executeUpdate();
+
+        return result > 0;
+    }
+
 }
