@@ -22,4 +22,9 @@ public class JSTLController {
     public ModelAndView getUser() {;
         return new ModelAndView("jstl/jstl", "resultObject", ormService.queryFindUserById(1));
     }
+
+    @RequestMapping(value="/jstlHTML", method=RequestMethod.GET)
+    public ModelAndView returnHTML() {
+        return new ModelAndView("jstl/jstl", "resultHTML", "<font color='red'><b>Test Color Red</b></font>");
+    }
 }
