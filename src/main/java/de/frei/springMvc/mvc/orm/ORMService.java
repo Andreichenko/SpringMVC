@@ -40,4 +40,18 @@ public class ORMService {
         int result = nativeQuery.executeUpdate();
         return result > 0; // result show how many rows was updated.
     }
+
+    public boolean insertUser(String username, String password, boolean enabled) {
+        System.out.println("ORMExample insertUser is called");
+
+        String qlString = "insert into user (username,password,enabled) values (?,?,?)";
+        Query query = entityManager.createNativeQuery(qlString);
+        query.setParameter(1, username);
+        query.setParameter(2, password);
+        query.setParameter(3, enabled);
+        int result = query.executeUpdate();
+
+        return result > 0;
+    }
+
 }
