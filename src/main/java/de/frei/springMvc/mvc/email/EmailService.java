@@ -1,6 +1,10 @@
 package de.frei.springMvc.mvc.email;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 public class EmailService {
@@ -16,4 +20,11 @@ public class EmailService {
     /*Email CCC*/
     public static final String CCC_LIST = "ccList";
 
+    @Autowired
+    private JavaMailSender mailSender; //see application-context.xml
+
+
+    public boolean sendEmail (final String templateName, final Map<String, Object> model) {
+        boolean res = false;
+    }
 }
