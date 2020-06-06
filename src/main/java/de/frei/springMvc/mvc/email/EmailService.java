@@ -26,15 +26,4 @@ public class EmailService {
     private JavaMailSender mailSender; //see application-context.xml
 
 
-    public boolean sendEmail (final String templateName, final Map<String, Object> model) {
-        boolean res = false;
-    }
-     try {
-        MimeMessagePreparator preparator = new MimeMessagePreparator() {
-            @Override
-            public void prepare(MimeMessage mimeMessage) throws Exception {
-                String from = (String) model.get(FROM);
-                String to = (String) model.get(TO);
-                String subject = (String) model.get(SUBJECT);
-
-        }
+}
