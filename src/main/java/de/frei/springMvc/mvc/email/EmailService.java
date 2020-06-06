@@ -1,5 +1,6 @@
 package de.frei.springMvc.mvc.email;
 
+import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessagePreparator;
@@ -24,6 +25,10 @@ public class EmailService {
 
     @Autowired
     private JavaMailSender mailSender; //see application-context.xml
+
+    @Autowired
+    private VelocityEngine velocityEngine; //see application-context.xml
+
 
 
 }
