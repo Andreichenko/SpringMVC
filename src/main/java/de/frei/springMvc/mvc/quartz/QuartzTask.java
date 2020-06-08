@@ -17,4 +17,10 @@ import org.slf4j.LoggerFactory;
 public class QuartzTask {
 
     private static final Logger logger = LoggerFactory.getLogger(QuartzTask.class);
+
+    public void simpleTaskMethod() {
+//		you can log here to database with simpletrigger
+//        logger.info("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
+//        System.out.println("Test Simple Quartz Time: " + Calendar.getInstance().getTime());
+    }
 }
