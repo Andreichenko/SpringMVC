@@ -1,6 +1,11 @@
 package de.frei.springMvc.mvc.quartz;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
 /**
  * look application-context.xml
  * 1. simpleTrigger
@@ -10,4 +15,6 @@ package de.frei.springMvc.mvc.quartz;
  */
 
 public class QuartzTask {
+
+    private static final Logger logger = LoggerFactory.getLogger(QuartzTask.class);
 }
