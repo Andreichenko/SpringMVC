@@ -8,6 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 public class RedirectController {
     //redirect to external URL
     public String redirectExample(HttpServletRequest request) {
-
+        return "redirect:" + request.getScheme() +"://jenkins.sytes.net";
     }
 }
