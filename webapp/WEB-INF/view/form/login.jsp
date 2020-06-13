@@ -15,7 +15,7 @@
     <link href="${bootstrap}" rel="stylesheet" />
     <link href="${signin}" rel="stylesheet" />
 </head>
-body>
+<body>
 <form name="form" action="j_spring_security_check" method="post" class="form-signin">
     <security:authorize access="hasAnyRole('ROLE_ADMIN','ROLE_SUPER_USER', 'ROLE_USER')" var="isUSer"/>
     <font size="2" color="red">
@@ -25,3 +25,45 @@ body>
             </c:if>
         </c:if>
     </font>
+
+    <font size="2" color="green">
+        <c:if test="${isUSer}">you are login as:
+            <security:authentication property="principal.username"/> with role:
+            <b><security:authentication property="principal.authorities"/></b>
+        </c:if>
+    </font>
+    <br/>
+    <c:if test="${not empty param.error}">
+        <font size="2" color="red"><b>bad password</b></font>
+    </c:if>
+
+    <h2 class="form-signin-heading">please login</h2>
+
+    <label for="inputEmail" class="sr-only"><spring:message code="email" text="Email"/></label>
+    <input id="inputEmail" class="form-control" name="j_username" value="admin@gmail.com" required autofocus/>
+
+    <label for="inputPassword" class="sr-only"><spring:message code="pass" text="Password"/></label>
+    <input type="password" id="inputPassword" class="form-control" name="j_password" value="12345" required/>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" id="rememberme"  name="_spring_security_remember_me"/>remember me
+        </label>
+    </div>
+    <input type="submit" value="login" class="btn btn-lg btn-primary btn-block" >
+    <br/>
+    <a href="javascript:history.back()">back</a>
+
+    <br /><br />
+    <p>allow roles:</p>
+
+    <b>ROLE_SUPER_USER</b><br />
+    Login:<span style="color: royalblue">superuser@outlook.com</span> Password: <span style="color: royalblue">12345</span> <br />
+    <b>ROLE_ADMIN</b> <br />
+    Login:<span style="color: royalblue">admin@gmail.com</span> Password: <span style="color: royalblue">12345</span> <br />
+    <b>ROLE_USER</b> <br />
+    Login: <span style="color: royalblue">roleuser@outlook.com</span> Password: <span style="color: royalblue">12345</span>
+</form>
+</body>
+
+</html>
