@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 
+<%--
+  Created by IntelliJ IDEA.
+  User: AlexFrei
+  Date: 28.06.20
+  Time: 20:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -47,7 +54,7 @@
                     <div class="jumbotron">
                         <h1><span class="error-404">404</span>
                         </h1>
-                        <p>Error 404. exceptions in web.xml error-page. you may go to:</p>
+                        <p>Error 404. This page settings in  web.xml error-page. You can go in:</p>
                         <ul>
                             <li>
                                 <a href="/">Home</a>
@@ -59,10 +66,10 @@
                                 Tutorial
                                 <ul>
                                     <li>
-                                        <a href="${file}"> PDF and Excel</a>
+                                        <a href="${file}">Loading file PDF and Excel</a>
                                     </li>
                                     <li>
-                                        <a href="${jdbc}">JDBC with JDBCTemplates</a>
+                                        <a href="${jdbc}">JDBC c JDBCTemplates</a>
                                     </li>
                                     <li>
                                         <a href="${email}">Java Email API and Spring Mail</a>
@@ -71,7 +78,7 @@
                                         <a href="${rest}">Rest Services (JSON and XML)</a>
                                     </li>
                                     <li>
-                                        <a href="${orm}">Spring MVC and Hibernate 5</a>
+                                        <a href="${orm}">Spring MVC и Hibernate 5</a>
                                     </li>
                                     <li>
                                         <a href="${runtimeException}">Runtime Exception</a>
@@ -91,7 +98,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/angularIndex.html">AngularJS</a>
+                                <a href="/angularindex.html">AngularJS</a>
                                 <ul>
                                     <li>
                                         <a href="${angularjson}">JavaScript Object Notation .stringify</a>
