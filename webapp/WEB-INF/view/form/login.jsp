@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%--
+  Created by IntelliJ IDEA.
+  User: AlexFrei
+  Date: 31.06.20
+  Time: 13:47
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="page" tagdir="/WEB-INF/tags" %>
@@ -15,48 +21,53 @@
     <link href="${bootstrap}" rel="stylesheet" />
     <link href="${signin}" rel="stylesheet" />
 </head>
+
+
 <body>
+
+
+
 <form name="form" action="j_spring_security_check" method="post" class="form-signin">
     <security:authorize access="hasAnyRole('ROLE_ADMIN','ROLE_SUPER_USER', 'ROLE_USER')" var="isUSer"/>
     <font size="2" color="red">
         <c:if test="${not isUSer}">
             <c:if test="${empty param.error}">
-                please login
+                You did not login
             </c:if>
         </c:if>
     </font>
-
+    <%----%>
     <font size="2" color="green">
-        <c:if test="${isUSer}">you are login as:
+        <c:if test="${isUSer}">You entered as:
             <security:authentication property="principal.username"/> with role:
             <b><security:authentication property="principal.authorities"/></b>
         </c:if>
     </font>
     <br/>
     <c:if test="${not empty param.error}">
-        <font size="2" color="red"><b>bad password</b></font>
+        <font size="2" color="red"><b>not the correct login or password</b></font>
     </c:if>
-
-    <h2 class="form-signin-heading">please login</h2>
-
+    <%----%>
+    <h2 class="form-signin-heading">Please enter</h2>
+    <%----%>
     <label for="inputEmail" class="sr-only"><spring:message code="email" text="Email"/></label>
     <input id="inputEmail" class="form-control" name="j_username" value="admin@gmail.com" required autofocus/>
-
+    <%----%>
     <label for="inputPassword" class="sr-only"><spring:message code="pass" text="Password"/></label>
     <input type="password" id="inputPassword" class="form-control" name="j_password" value="12345" required/>
-
+    <%----%>
     <div class="checkbox">
         <label>
-            <input type="checkbox" id="rememberme"  name="_spring_security_remember_me"/>remember me
+            <input type="checkbox" id="rememberme"  name="_spring_security_remember_me"/>Remember me
         </label>
     </div>
-    <input type="submit" value="login" class="btn btn-lg btn-primary btn-block" >
+    <input type="submit" value="Login" class="btn btn-lg btn-primary btn-block" >
     <br/>
-    <a href="javascript:history.back()">back</a>
-
+    <a href="javascript:history.back()">Back</a>
+    <%----%>
     <br /><br />
-    <p>allow roles:</p>
-
+    <p>Available roles:</p>
+    <%----%>
     <b>ROLE_SUPER_USER</b><br />
     Login:<span style="color: royalblue">superuser@outlook.com</span> Password: <span style="color: royalblue">12345</span> <br />
     <b>ROLE_ADMIN</b> <br />
@@ -64,6 +75,11 @@
     <b>ROLE_USER</b> <br />
     Login: <span style="color: royalblue">roleuser@outlook.com</span> Password: <span style="color: royalblue">12345</span>
 </form>
+<%----%>
+
+
+
+
 </body>
 
 </html>
