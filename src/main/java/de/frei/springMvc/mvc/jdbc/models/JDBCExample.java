@@ -1,4 +1,4 @@
-package de.frei.springMvc.mvc.jdbc;
+package de.frei.springMvc.mvc.jdbc.models;
 
 import de.frei.springMvc.mvc.bean.DBLog;
 import de.frei.springMvc.mvc.bean.User;
