@@ -1,7 +1,8 @@
-package de.frei.springMvc.mvc.jdbc;
+package de.frei.springMvc.mvc.jdbc.controllers;
 
 import de.frei.springMvc.mvc.bean.DBLog;
 import de.frei.springMvc.mvc.bean.User;
+import de.frei.springMvc.mvc.jdbc.models.JDBCExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
