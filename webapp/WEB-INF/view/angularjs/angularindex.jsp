@@ -103,3 +103,16 @@
         <a href="/customdirective.html">Example my own directive</a>
         </div>
         </div>
+
+
+
+        </div>
+            <!-- /.row -->
+
+            <hr>
+
+        </div>
+        <!-- /.container -->
+    </jsp:body>
+
+</page:template>
