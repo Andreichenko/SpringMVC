@@ -32,3 +32,22 @@
         </div>
         <!-- /.row -->
 
+        <c:url value="/uploadFile" var="fileUploadControllerURL" />
+
+
+        <pre>
+        <b>1. Object in JavaScript</b>
+
+        <code>
+        var simpleObject = {
+        title: 'Simple JS Object title',
+        developer: 'AlexFrei'
+        };
+        var jsonSimpleObject = JSON.stringify(simpleObject);
+        (in a script will be used JSON.stringify(simpleObject, null, 0),
+        where 0 - not formatted output, 1 - the formatted output.
+        var simpleObjectParsed = JSON.parse(jsonSimpleObject);
+        document.getElementById("resultStrigify").innerHTML = jsonSimpleObject;
+        document.getElementById("resultParse").innerHTML = simpleObjectParsed.title;
+        </code>
+        </pre>
