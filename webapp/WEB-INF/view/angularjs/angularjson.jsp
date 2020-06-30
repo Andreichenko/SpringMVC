@@ -105,4 +105,17 @@
         document.getElementById('resultArrayParsed').innerHTML = arrayParsed[0];
         </code>
         </pre>
+        <script type="text/javascript">
+            var nestedObject = {
+                name: 'some nested Object',
+                information: {
+                    developer: 'AlexFrei',
+                    year: 2017
+                }
+            };
+            document.getElementById('nestedObjectName').innerHTML = nestedObject.name;
+            document.getElementById('nestedObjectInfoYear').innerHTML = nestedObject.information.year;
+        </script>
 
+    </jsp:body>
+</page:template>
