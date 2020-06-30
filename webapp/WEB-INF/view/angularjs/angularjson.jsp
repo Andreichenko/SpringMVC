@@ -66,3 +66,18 @@
         </div>
         </div>
         </div>
+        <div class="panel-group" id="accordionTwo">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapseTwo">
+        <b> Result is JSON.parse(jsonSimpleObject)</b>
+        </a>
+        </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse in">
+        <div class="panel-body">
+        <code id="resultParse"></code>
+        </div>
+        </div>
+        </div>
