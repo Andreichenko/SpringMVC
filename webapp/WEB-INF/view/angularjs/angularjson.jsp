@@ -51,3 +51,18 @@
         document.getElementById("resultParse").innerHTML = simpleObjectParsed.title;
         </code>
         </pre>
+        <div class="panel-group" id="accordionOne">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordionOne" href="#collapseOne">
+        <b>Result is JSON.stringify(simpleObject)</b>
+        </a>
+        </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+        <code id = "resultStringify"></code>
+        </div>
+        </div>
+        </div>
