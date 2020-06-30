@@ -95,3 +95,14 @@
         </script>
 
 
+        <pre>
+        <b>2. Arrays in JavaScript</b>
+        <code>
+        var arrayObject = ['ZeroElement', 'FirstEl' , 'SecondElem'];
+        var jsonArrayObj = JSON.stringify(arrayObject,null, 1);
+        document.getElementById('resultJsonArrayObj').innerHTML = jsonArrayObj;
+        var arrayParsed = JSON.parse(jsonArrayObj);
+        document.getElementById('resultArrayParsed').innerHTML = arrayParsed[0];
+        </code>
+        </pre>
+
