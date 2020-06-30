@@ -81,3 +81,17 @@
         </div>
         </div>
         </div>
+
+        <script type="text/javascript">
+        var simpleObject = {
+        title: 'Simple JS Object title',
+        developer: 'AlexFrei'
+        };
+
+        var jsonSimpleObject = JSON.stringify(simpleObject, null, 0); // 1 - space pretty print
+        var simpleObjectParsed = JSON.parse(jsonSimpleObject);
+        document.getElementById("resultStringify").innerHTML = jsonSimpleObject;
+        document.getElementById("resultParse").innerHTML = 'title: ' + simpleObjectParsed.title + '; developer: ' + simpleObjectParsed.developer;
+        </script>
+
+
