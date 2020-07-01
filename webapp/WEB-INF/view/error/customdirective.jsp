@@ -16,6 +16,20 @@
         <!-- Page Content -->
         <div class="container">
 
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">AngularJS customdirective
+                    <small>customdirective</small>
+                </h3>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">customdirective</li>
+                </ol>
+            </div>
+        </div>
+
 
     </jsp:body>
 </page:angular-template>
