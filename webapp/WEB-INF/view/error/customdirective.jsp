@@ -30,6 +30,23 @@
             </div>
         </div>
 
+        <!-- /.row -->
+
+        <script>
+            var myapp = angular.module("myApp", []);
+            myapp.directive('cutomdirective', function() {
+                var directive = {};
+                directive.restrict = 'E'; // restrict the directive to element
+                directive.template = "<b>Test Basic Custom Directive. Name must be lower case 'customdirective', not 'customDirective'</b>";
+                return directive;
+            });
+        </script>
+
+        <h3>AngularJS Custom Directive</h3>
+        <div ng-app="myApp">
+            <cutomdirective></cutomdirective>
+        </div>
+
 
     </jsp:body>
 </page:angular-template>
