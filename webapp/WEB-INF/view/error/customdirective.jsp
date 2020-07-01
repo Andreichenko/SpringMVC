@@ -2,7 +2,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: AlexFrei
-  Date: 06.04.17
+  Date: 06.06.20
   Time: 17:02
   To change this template use File | Settings | File Templates.
 --%>
@@ -12,5 +12,10 @@
 <%@ taglib prefix="page" tagdir="/WEB-INF/tags" %>
 <page:angular-template>
     <jsp:body>
+
+        <!-- Page Content -->
+        <div class="container">
+
+
     </jsp:body>
 </page:angular-template>
