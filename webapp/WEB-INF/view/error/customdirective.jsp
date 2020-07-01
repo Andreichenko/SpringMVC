@@ -47,6 +47,6 @@
             <cutomdirective></cutomdirective>
         </div>
 
-
+        <!-- /.container -->
     </jsp:body>
 </page:angular-template>
