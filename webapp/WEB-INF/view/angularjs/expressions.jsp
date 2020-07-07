@@ -26,6 +26,33 @@
             </div>
         </div>
 
+        <%--Content row--%>
+
+        <div class="row">
+          <div class="col-lg-12">
+        <script>
+            var app = angular.module('application', []);
+            app.controller('myController', function($scope) {
+                $scope.framework = {name: 'Spring MVC FrameWork'};
+
+                $scope.links = [
+                    {link:'http://spring.io'},
+                    {link:'http://web.de'},
+                    {link:'http://bewerbung.de'},
+                    {someFunction: function(){
+                            return 'someFunctionTest'
+                        }
+                    }
+                ];
+
+                $scope.someFunction = function(value){
+                    return 'you put this value:' + value;
+                };
+            });
+
+        </script>
+
+
     </jsp:body>
 
 </page:angular-template>
