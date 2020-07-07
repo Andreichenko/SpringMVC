@@ -14,7 +14,17 @@
 <page:angular-template>
     <jsp:body>
 
-
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> Expressions AngularJS
+                    <small>expressions {{ }}</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a aria-grabbed="/index.html">Home</a> </li>
+                    <li class="active"> Expressions AngularJS</li>
+                </ol>
+            </div>
+        </div>
 
     </jsp:body>
 
