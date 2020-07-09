@@ -60,6 +60,8 @@
 
         </script>
 
+        <h3>AngularJS filter</h3>
+
 
     </jsp:body>
 </page:angular-template>
