@@ -74,12 +74,27 @@
                     </tr>
                 </table>
 
+                <h3>AngularJS internal filters (up\low uppercase)</h3>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Uppercase filter : {{ browser.name | uppercase }}</td>
+                        <td>Lowercase filter : {{ browser.name | lowercase }} </td>
+                    </tr>
+                </table>
 
+                <h3>AngularJS json filter</h3>
+                <pre>{{ companies[0] | json }}</pre>
+
+                <h3>AngularJS filter of date</h3>
+                <span>{{currentDate| date:"MM/dd/yyyy"}}</span><br/>
+
+                <h3>AngularJS own filter</h3>
+                {{ "test" | newFilter }} <br/>
+                {{ "test" | newFilter:"parameter1":"parameter2" }}
+                <br/><br/>
+                <br/><br/>
 
             </div>
-
-
-
 
         </div>
 
