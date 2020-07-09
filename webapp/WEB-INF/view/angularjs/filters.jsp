@@ -62,6 +62,26 @@
 
         <h3>AngularJS filter</h3>
 
+            <div ng-app="myApp" ng-controller="myController">
+                <h3>Filter order with pipe " expression | filter1 | filter2 | ... "</h3>
+
+                <h3>Limit of string in | limitTo: 3</h3>
+                <table class="table table-striped">
+                    <tr ng-repeat="company in companies | limitTo:3">
+                        <td>{{ company.name }}</td>
+                        <td>{{ company.browser }}</td>
+                        <td>{{ company.link }}</td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+
+
+
+
+        </div>
 
     </jsp:body>
 </page:angular-template>
