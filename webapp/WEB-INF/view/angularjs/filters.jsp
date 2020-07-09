@@ -15,6 +15,18 @@
 <page:angular-template>
     <jsp:body>
 
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header"> Filters AnjularJS
+                    <small>filters</small></h3>
+                <ol class="breadcrumb">
+                    <li><a href="/index.html">Home</a> </li>
+                    <li class="active"> filters</li>
+                </ol>
+            </div>
+        </div>
+
 
     </jsp:body>
 </page:angular-template>
