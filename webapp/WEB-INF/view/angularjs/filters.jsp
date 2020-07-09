@@ -12,3 +12,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="page" tagdir="/WEB-INF/tags" %>
 
+<page:angular-template>
+    <jsp:body>
+
+
+    </jsp:body>
+</page:angular-template>
