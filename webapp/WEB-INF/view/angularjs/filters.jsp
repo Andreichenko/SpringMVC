@@ -28,5 +28,38 @@
         </div>
 
 
+        <script>
+
+            var app = angular.module('myApp', []);
+            app.controller('myController', function($scope) {
+                $scope.companies = [
+                    {name: "Alphabet inc.", browser: 'Chrome', link: 'https://google.com'},
+                    {name: "Mozilla Corporation", browser: 'Firefox', link: 'https://www.mozilla.org/ru/'},
+                    {name: "Apple inc.", browser: 'Safari', link: 'https://apple.com'},
+                    {name: "Opera Software", browser: 'Opera' , link: 'http://www.opera.com'},
+                    {name: "Microsoft", browser: 'IE', link: 'https://microsoft.com'}
+                ];
+
+                $scope.browser = {name: 'Netscape' , email: 'itisagooddayto@die.com'};
+                $scope.currentDate = new Date();
+            });
+
+            //custom filter declaration
+            app.filter('newFilter', function() {
+                //first parameter is filter input
+                //other parameters are optional parameters
+                return function(filterInput, optional1, optional2, optional3) {
+                    var filterResult;
+                    //filter function start here
+                    filterResult = "filter result: " + filterInput + " " + optional1 + " " + optional2;
+                    //filter function ends
+                    return filterResult;
+
+                }
+            });
+
+        </script>
+
+
     </jsp:body>
 </page:angular-template>
