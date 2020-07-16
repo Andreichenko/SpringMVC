@@ -31,6 +31,63 @@
         </div>
         <!-- /.row -->
 
+        <script>
+
+            var app = angular.module('myApp', ['ngResource']);
+            app.controller('JSONController', function($scope, $http) {
+                $http.get('/rest/posts/13').
+                success(function(data, status, headers, config) {
+                    $scope.post = data;
+                    console.log(data);
+                }).
+                error(function($data, status, $headers, config) {
+                    alert("error getting data");
+                });
+
+
+                //test JSON as post
+                var post = {
+                    userId: 'test',
+                    id : '1',
+                    title : 'test',
+                    body: 'test'
+                };
+
+                //$http
+                $http.post('/rest/savePost', post).
+                success(function(data, status, headers, config) {
+                    $scope.post = data;
+                    console.log(data);
+                }).
+                error(function(data, status, headers, config) {
+                    alert("error post data");
+                });
+            });
+
+            //$resource
+            //$resource configuration object is Posts used for CRUD
+            app.factory("Posts", function($resource) {
+                return $resource("/rest/delPosts/:id");
+            });
+
+            //$resource
+            //get post id mapped to @RestTemplateController getRestPostsById
+            app.controller("PostQueryByIdController", function($scope, Posts) {
+                Posts.get({ id: 1 }, function(data) {
+                    $scope.posts = data;
+                    console.log(data);
+                });
+            });
+
+            //$resource
+            //delete a post mapped to @RestTemplateController deletePostByIDAngular
+            app.controller("DeletePostByIdController", function($scope, Posts) {
+                Posts.delete({ id: 4 })
+            });
+
+        </script>
+
+
 
     </jsp:body>
 </page:angular-template>
