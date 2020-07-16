@@ -87,6 +87,28 @@
 
         </script>
 
+        <h3>AngularJS routing</h3>
+        <div ng-app="myApp">
+        <div ng-controller="JSONController">
+        <table class="table">
+            <tr>
+                <td><b>userid</b></td>
+                <td>{{ post.userId }}</td>
+            </tr>
+            <tr>
+                <td><b>id</b></td>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr>
+                <td><b>title</b></td>
+                <td>{{ post.title}}</td>
+            </tr>
+            <tr>
+                <td><b>body</b></td>
+                <td>{{ post.body }}</td>
+            </tr>
+        </table>
+
 
 
     </jsp:body>
