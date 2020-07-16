@@ -13,7 +13,23 @@
 
 <page:angular-template>
     <jsp:body>
+        <!-- Page Content -->
+        <div class="container">
 
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">AngularJS http resource
+                    <small>http resource</small>
+                </h3>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">http resource</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
 
 
     </jsp:body>
