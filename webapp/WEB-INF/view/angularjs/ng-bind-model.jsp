@@ -30,5 +30,47 @@
         <%--Content Row now--%>
 
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div ng-app>
+                        <h3>Sample of use the model AngularJS</h3>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><b>username</b></td>
+                                    <td><input type="text" ng-model="userName"/> </td>
+                                </tr>
+                                <tr>
+                                    <td><b>password</b></td>
+                                    <td><input type="password" ng-model="userPass"/></td>
+                                </tr>
+                                <tr>
+                                    <td><b> email</b></td>
+                                    <td><input type="email" ng-model="Email"/> </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <br />
+
+                        Hi, {{userName}}! This is example to use model in AngularJS. <br/>
+                        Your password is :) {{userPass}} <br />
+                        Email: {{Email}} <br/>
+
+                        <br/> And here too, but through ng-bind: <br/>
+                        Name <span style="color: royalblue;" ng-bind="userName"></span> <br/>
+                        Password <span style="color: royalblue;" ng-bind="userPass"></span><br/>
+                        Email <span style="color: royalblue;" ng-bind="Email"></span><br/>
+
+                        There are some minor problems with Chrome.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </jsp:body>
 </page:angular-template>
