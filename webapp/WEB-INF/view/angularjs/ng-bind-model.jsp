@@ -11,11 +11,10 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="page" tagdir="/WEB-INF/tags" %>
 
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<page:angular-template>
+    <jsp:body>
 
-</body>
-</html>
+
+
+    </jsp:body>
+</page:angular-template>
