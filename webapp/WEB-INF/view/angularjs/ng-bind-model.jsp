@@ -13,7 +13,21 @@
 
 <page:angular-template>
     <jsp:body>
-
+        <%--Page count--%>
+        <div class="container">
+        <%--Page Heading/breadcrumps--%>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> AngularJS
+                    <small>ng-bind and ng-model</small></h1>
+                <ol class="breadcrumb">
+                    <li><a href="/index.html">Home</a> </li>
+                    <li class="active"> AngularJS ng-bind, ng-model</li>
+                </ol>
+            </div>
+        </div>
+        <%--/.row--%>
+        <%--Content Row now--%>
 
 
     </jsp:body>
