@@ -14,7 +14,6 @@
 
 <page:angular-template>
     <jsp:body>
-
         <%--page content--%>
 
         <div class="container">
@@ -30,39 +29,36 @@
             </div>
         </div>
 
-
-
         <%--/row--%>
         <%--content--%>
         <div class="row">
-        <div class="col-lg-12">
-        <style type="text/css">
-            .errorClass{
-                text-decoration: underline;
-                color: rebeccapurple;
-            }
-            .boldClass{
-                font-weight: bold;
-                background: white;
-            }
-        </style>
-        <script>
-            var app = angular.module('myApp', []);
-            app.controller('myClassController', function($scope){
-                $scope.hasSomeError = true;
-                //               $scope.hasSomeError = false;
-            });
-        </script>
+            <div class="col-lg-12">
+                <style type="text/css">
+                    .errorClass{
+                        text-decoration: underline;
+                        color: rebeccapurple;
+                    }
+                    .boldClass{
+                        font-weight: bold;
+                        background: white;
+                    }
+                </style>
+                <script>
+                    var app = angular.module('myApp', []);
+                    app.controller('myClassController', function($scope){
+                        $scope.hasSomeError = true;
+                        //               $scope.hasSomeError = false;
+                    });
+                </script>
 
-
-            <div ng-app="myApp" ng-controller="myClassController">
-                <h3> Sample class AngularJS</h3>
-                <p ng-class="{errorClass: true, boldClass: hasSomeError}"> Message for App</p>
-                In this example  tag < p > have attribute ng-class with enumeration style classes css. They have
-                $scope.hasSomeError = true or just name parameter is: true <br/>
-                    <%--'< p ng-class="{errorClass: true, boldClass: hasSomeError} > < /p>" '--%>
+                <div ng-app="myApp" ng-controller="myClassController">
+                    <h3> Sample class AngularJS</h3>
+                    <p ng-class="{errorClass: true, boldClass: hasSomeError}"> Message for App</p>
+                    In this example  tag < p > have attribute ng-class with enumeration style classes css. They have
+                    $scope.hasSomeError = true or just name parameter is: true <br/>
+                        <%--'< p ng-class="{errorClass: true, boldClass: hasSomeError} > < /p>" '--%>
+                </div>
             </div>
-        </div>
 
         </div>
         <hr/>
