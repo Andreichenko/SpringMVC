@@ -30,5 +30,30 @@
             </div>
         </div>
 
+
+
+        <%--/row--%>
+        <%--content--%>
+        <div class="row">
+        <div class="col-lg-12">
+        <style type="text/css">
+            .errorClass{
+                text-decoration: underline;
+                color: rebeccapurple;
+            }
+            .boldClass{
+                font-weight: bold;
+                background: white;
+            }
+        </style>
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myClassController', function($scope){
+                $scope.hasSomeError = true;
+                //               $scope.hasSomeError = false;
+            });
+        </script>
+
+
     </jsp:body>
 </page:angular-template>
