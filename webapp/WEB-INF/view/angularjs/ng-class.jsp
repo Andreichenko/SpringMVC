@@ -14,5 +14,21 @@
 
 <page:angular-template>
     <jsp:body>
+
+        <%--page content--%>
+
+        <div class="container">
+                <%--page heading--%>
+            <div class="col-lg-12">
+                <h1 class="page-header" Class AngularJS>
+                    <small>ng-class</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="/index.html">Home</a> </li>
+                    <li class="active">AngularJS ng-class</li>
+                </ol>
+            </div>
+        </div>
+
     </jsp:body>
 </page:angular-template>
