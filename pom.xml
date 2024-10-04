@@ -43,7 +43,7 @@
         <quartz.scheduling.version>2.3.2</quartz.scheduling.version>
 
         <!-- Spring Security -->
-        <spring-security.version>5.2.10.RELEASE</spring-security.version>
+        <spring-security.version>5.4.11</spring-security.version>
 
     </properties>
 
