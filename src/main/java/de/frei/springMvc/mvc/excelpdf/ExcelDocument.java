@@ -38,13 +38,13 @@ public class ExcelDocument extends AbstractXlsView {
 
         Font font = workbook.createFont();
         font.setFontName("Arial");
-        font.setBoldweight(Font.BOLDWEIGHT_BOLD);
-        font.setColor(HSSFColor.WHITE.index);
+        font.setBold(true);
+        font.setColor(HSSFColor.HSSFColorPredefined.WHITE.getIndex());
 
         //Create Style for header
         CellStyle styleHeader = workbook.createCellStyle();
-        styleHeader.setFillForegroundColor(HSSFColor.BLUE.index);
-        styleHeader.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        styleHeader.setFillForegroundColor(HSSFColor.HSSFColorPredefined.BLUE.getIndex());
+        styleHeader.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         styleHeader.setFont(font);
 
         //Set excel header
